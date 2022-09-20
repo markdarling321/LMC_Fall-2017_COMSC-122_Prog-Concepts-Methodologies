@@ -1,0 +1,57 @@
+=====================================================================
+
+[1.] RUN THE PROGRAM, TYPING IN THE FILE NAME: numbers1.txt .
+
+[a.] WHAT HAPPENS?
+
+My program crashed and IDLE gave me a Traceback call to line 40
+in <module> main() as well as line 23 in main for the statement:
+number = int(line).
+
+I think this is because it is trying to read the string 'six'
+that it is getting from the current line in the for loop into
+the variable 'number' as an integer and there is no exception
+handler to address the illegal operation.
+
+[b.] WHAT KIND OF AN ERROR DID YOU GET?
+
+ValueError: invalid literal for int() with base 10: 'six'
+
+=====================================================================
+
+[2.] TRY AGAIN, TYPING IN THE FILE NAME: numbers2.txt .
+
+[a.] WHAT HAPPENS?
+
+My program crashed and IDLE gave me a Traceback call to line 40
+in <module> main() as well as line 12 in main for the statement:
+number = int(infile.readline()).
+
+I think this is because it is trying to read a line that doesn't
+exist into a variable as an integer and the default return type
+for readline() is a string. There is also no exception handler
+to address the mismatching variable types between the arguments
+and parameters.
+
+[b.] WHAT KIND OF AN ERROR DID YOU GET?
+
+ValueError: invalid literal for int() with base 10: ''
+
+=====================================================================
+
+[3.] TRY AGAIN, TYPING IN THE FILE NAME: badname.txt .
+
+[a.] WHAT HAPPENS?
+
+My program crashed and IDLE gave me a Traceback call to line 40
+in <module> main() as well as line 9 in main for the statement:
+infile = open(file_name,'r').
+
+I think this is because it is trying to open a file that does not
+exist without checking to see whether the file exists or not first.
+
+[b.] WHAT KINF OF AN ERROR DID YOU GET?
+
+FileNotFoundError: [Errno 2] No such file or directory: 'badname.txt'
+
+=====================================================================
